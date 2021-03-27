@@ -39,11 +39,11 @@ function draw() {
   drawSprites();
 }
 
-function hasCollided(obj1, obj2) {
+function hasCollided(lbullet, lwall) {
 
-  obj1RightEdge = obj1.x + obj1.width;
-  obj2LeftEdge = obj2.x;
-  if (obj1RightEdge >= obj2LeftEdge) {
+  bulletRightEdge = lbullet.x + lwall.width;
+  wallLeftEdge = lwall.x;
+  if (bulletRightEdge >= wallLeftEdge) {
     return true;
 
   }
